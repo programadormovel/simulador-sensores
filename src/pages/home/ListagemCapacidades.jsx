@@ -19,7 +19,7 @@ const ListagemCapacidades = () => {
         return (
             dadosColetados.map((dados)=>{
                 return (
-                    <li key={dados.id} style={{textDecoration: 'none'}}>
+                    <li key={dados.id}>
                         {dados.name}
                     </li>
                 )
@@ -36,8 +36,8 @@ const ListagemCapacidades = () => {
     }, [dadosColetados])
 
     return (
-        <div style={{backgroundColor: 'white', color:'black'}}>
-            <ul style={{margin:'32px', textDecoration: 'none'}}>
+        <div className="Listagem">
+            <ul>
                 <Listagem />
             </ul>
         </div>

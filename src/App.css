@@ -2,6 +2,30 @@
     min-width: none;
     padding: 2rem;
     text-align: center;
+    background-color: red;
+    max-width: 500vw;
+    width: 300vw;
+    flex-wrap: nowrap;
+    flex-direction: row;
+}
+
+.Listagem {
+    background-color: white;
+    color: black;
+    width: 300vh;
+    max-width: 500vh;
+    min-width: none;
+    height: 50vh;
+    margin: 2.5em;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    overflow: hidden;
+    scrollbar-width: 2rem;
+    scrollbar-color: blue;
+}
+
+li {
+    width: 400dp;
 }
 
 .logo {

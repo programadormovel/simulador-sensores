@@ -25,7 +25,6 @@ body {
     margin: 0;
     display: flex;
     flex-grow: 1;
-    flex-direction: column;
     justify-content: start;
     background-color: 'blue';
     min-height: 1000vh;
@@ -51,6 +50,7 @@ button {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    margin: 1.5rem;
 }
 
 button:hover {

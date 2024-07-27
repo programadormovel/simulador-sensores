@@ -6,7 +6,7 @@ const ListagemRecursos = () => {
     const [dadosColetados, setDadosColetados] = useState([]);
 
     const requisicao = () => {
-        axios.get("http://iot.ipt.br:8000/collector/resources/332cb564-475a-4236-819b-0b188ace0b4e/data/")
+        axios.get("http://iot.ipt.br:8000/collector/resources/e7e529dc-0d06-4771-a2f5-3efa52c51f6b/data/")
         .then((response) => {
             setDadosColetados(response.data.resources[0].capabilities.environment_monitoring)
         })
@@ -19,7 +19,7 @@ const ListagemRecursos = () => {
         return (
             dadosColetados.map((dados)=>{
                 return (
-                    <li style={{textDecoration: 'none'}}>
+                    <li>
                         <p> 
                             Temperatura: {dados.temperatura_adriano} <br/>
                             Umidade: {dados.umidade_adriano} <br/>
@@ -40,8 +40,8 @@ const ListagemRecursos = () => {
     }, [dadosColetados])
 
     return (
-        <div style={{backgroundColor: 'white', color:'black'}}>
-            <ul style={{margin:'32px', textDecoration: 'none'}}>
+        <div className="Listagem">
+            <ul>
                 <Listagem />
             </ul>
         </div>
