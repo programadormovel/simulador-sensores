@@ -1,0 +1,39 @@
+{
+    "capacidades": [{
+            "id": 1,
+            "description": "Gastron_Carapicuíba",
+            "uuid": "af7b7ed2-e5cf-44a5-bd6d-9038afe3c7a5",
+            "status": "active",
+            "lat": -23.5113,
+            "lon": -46.8768,
+            "city": "Barueri"
+        },
+        {
+            "id": 2,
+            "description": "Gastron_Araras",
+            "uuid": "46f21c27-d331-4349-bf51-3c568d1889f7",
+            "status": "active",
+            "lat": -22.3577,
+            "lon": -47.3849,
+            "city": "Araras"
+        },
+        {
+            "id": 3,
+            "description": "Gastron_Araçatuba",
+            "uuid": "eec19f03-74d2-43bd-b793-992ece6e8802",
+            "status": "active",
+            "lat": -21.2115,
+            "lon": -50.4261,
+            "city": "Araçatuba"
+        },
+        {
+            "id": 4,
+            "description": "Gastron_São_Paulo",
+            "uuid": "2902b8e8-91ab-4139-a376-715ebf7ff187",
+            "status": "active",
+            "lat": -23.5489,
+            "lon": -46.6388,
+            "city": "São Paulo"
+        }
+    ]
+}
