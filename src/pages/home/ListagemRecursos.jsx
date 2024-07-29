@@ -6,7 +6,7 @@ const ListagemRecursos = () => {
     const [dadosColetados, setDadosColetados] = useState([]);
 
     const requisicao = () => {
-        axios.get("http://iot.ipt.br:8000/collector/resources/86e5d735-622a-4896-98c9-4e85f1246c4d/data/")
+        axios.get("http://iot.ipt.br:8000/collector/resources/af7b7ed2-e5cf-44a5-bd6d-9038afe3c7a5/data/")
         .then((response) => {
             setDadosColetados(response.data.resources[0].capabilities.environment_monitoring)
         })

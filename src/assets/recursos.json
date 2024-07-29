@@ -1,7 +1,7 @@
 {
-    "capacidades": [{
+    "recursos": [{
             "id": 1,
-            "description": "Gastron_Carapicuíba",
+            "description": "Gastron_Barueri",
             "uuid": "af7b7ed2-e5cf-44a5-bd6d-9038afe3c7a5",
             "status": "active",
             "lat": -23.5113,

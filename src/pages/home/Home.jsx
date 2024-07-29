@@ -5,22 +5,22 @@ import ListagemRecursos from "./ListagemRecursos";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../../App.css'
 import axios from 'axios';
-import capacidades from '../../assets/capacidades.json';
+import recursos from '../../assets/recursos.json';
 
 const Home = () => {
   const [clicou, setClicou] = useState(false);
   const [trocar, setTrocar] = useState(false);
   const [cor, setCor] = useState('white');
   const [corFundo, setCorFundo] = useState('black');
-  const [uuid, setUUID] = useState('86e5d735-622a-4896-98c9-4e85f1246c4d');
+  const [uuid, setUUID] = useState('2902b8e8-91ab-4139-a376-715ebf7ff187');
   // const [uuid, setUUID] = useState(capacidades[0].id);
-  const [temperatura, setTemperatura] = useState(23);
-  const [umidade, setUmidade] = useState(85);
-  const [pressao, setPressao] = useState(700);
-  const [gas, setGas] = useState(30);
+  const [temperatura, setTemperatura] = useState(21.99);
+  const [umidade, setUmidade] = useState(62.87);
+  const [pressao, setPressao] = useState(645.42);
+  const [gas, setGas] = useState(34.15);
   const [profundidade, setProfundidade] = useState(100);
   const [dia, setDia] = useState(1);
-  const [mes, setMes] = useState(7);
+  const [mes, setMes] = useState(6);
   const [hora, setHora] = useState(0);
   
   // const dados = {
@@ -52,36 +52,49 @@ const Home = () => {
       do{
         horaAtual = horaAtual + 1;
 
-        if(profundidadeAtual > 10){
+        if(profundidadeAtual > 5){
           if(horaAtual >= 6 && horaAtual <= 7){
-            profundidadeAtual = profundidadeAtual - 5;
-            temperaturaAtual = temperaturaAtual + .05;
-            umidadeAtual = umidadeAtual + .05;
-            pressaoAtual = pressaoAtual + 30;
-            gasAtual = gasAtual + .35;
+            profundidadeAtual = profundidadeAtual - 3;
+            temperaturaAtual = temperaturaAtual + .08;
+            umidadeAtual = umidadeAtual + .02;
+            pressaoAtual = pressaoAtual + .46;
+            gasAtual = gasAtual + .07;
+          }
+          else if(horaAtual > 7 && horaAtual < 10){
+            profundidadeAtual = profundidadeAtual - 7;
+            temperaturaAtual = temperaturaAtual + .08;
+            umidadeAtual = umidadeAtual + .02;
+            pressaoAtual = pressaoAtual + .46;
+            gasAtual = gasAtual + .07;
           }
           else if(horaAtual >= 10 && horaAtual <= 12){
-            profundidadeAtual = profundidadeAtual - 10;
-            temperaturaAtual = temperaturaAtual + 1;
-            umidadeAtual = umidadeAtual + .05;
-            pressaoAtual = pressaoAtual + 50;
-            gasAtual = gasAtual + .35;
+            profundidadeAtual = profundidadeAtual - 9;
+            temperaturaAtual = temperaturaAtual + .08;
+            umidadeAtual = umidadeAtual + .02;
+            pressaoAtual = pressaoAtual + .46;
+            gasAtual = gasAtual + .07;
           }
           else if(horaAtual >= 12 && horaAtual <= 14){
+            profundidadeAtual = profundidadeAtual - 11;
+            temperaturaAtual = temperaturaAtual + .09;
+            umidadeAtual = umidadeAtual + .01;
+            pressaoAtual = pressaoAtual + .47;
+            gasAtual = gasAtual + .07;
+          }
+          else if(horaAtual > 14 && horaAtual <= 18){
+            profundidadeAtual = profundidadeAtual - 15;
+            temperaturaAtual = temperaturaAtual + .08;
+            umidadeAtual = umidadeAtual + .02;
+            pressaoAtual = pressaoAtual + .46;
+            gasAtual = gasAtual + .07;
+          }else if(horaAtual >= 19 && horaAtual <= 21){
             profundidadeAtual = profundidadeAtual - 20;
-            temperaturaAtual = temperaturaAtual + 1;
-            umidadeAtual = umidadeAtual + .1;
-            pressaoAtual = pressaoAtual + 50;
-            gasAtual = gasAtual + .45;
+            temperaturaAtual = temperaturaAtual + .08;
+            umidadeAtual = umidadeAtual + .02;
+            pressaoAtual = pressaoAtual + .46;
+            gasAtual = gasAtual + .07;
           }
-          else if(horaAtual >= 18 && horaAtual <= 20){
-            profundidadeAtual = profundidadeAtual - 10;
-            temperaturaAtual = temperaturaAtual + 1;
-            umidadeAtual = umidadeAtual + .05;
-            pressaoAtual = pressaoAtual + 50;
-            gasAtual = gasAtual + .35;
-          }
-        } else if (profundidadeAtual >=0 && profundidadeAtual <= 10){
+        } else if (profundidadeAtual >=0 && profundidadeAtual <= 0){
           temperaturaAtual = temperatura;
           umidadeAtual = umidade;
           pressaoAtual = pressao;
